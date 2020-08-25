@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.github_api_application.ui.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_authorizeFragment"
+            app:destination="@id/authorizeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authorizeFragment"
+        android:name="com.example.github_api_application.ui.authorize.AuthorizeFragment"
+        android:label="AuthorizeFragment"
+        tools:layout="@layout/fragment_authorize">
+        <action
+            android:id="@+id/action_authorizeFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.example.github_api_application.ui.users.UserDetailFragment"
+        android:label="UserDetailFragment"
+        tools:layout="@layout/fragment_user_detail">
+        <action
+            android:id="@+id/action_userDetailFragment_to_repositoriesFragment"
+            app:destination="@id/repositoriesFragment" />
+        <action
+            android:id="@+id/action_userDetailFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/repositoriesFragment"
+        android:name="com.example.github_api_application.ui.repositories.RepositoriesFragment"
+        android:label="RepositoriesFragment"
+        tools:layout="@layout/fragment_repositories">
+        <action
+            android:id="@+id/action_repositoriesFragment_to_repositoryDetailFragment"
+            app:destination="@id/repositoryDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.example.github_api_application.ui.users.UsersFragment"
+        android:label="UsersFragment"
+        tools:layout="@layout/fragment_users">
+        <action
+            android:id="@+id/action_usersFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/repositoryDetailFragment"
+        android:name="com.example.github_api_application.ui.repositories.RepositoryDetailFragment"
+        android:label="RepositoryDetailFragment"
+        tools:layout="@layout/fragment_user_detail" />
+</navigation>
