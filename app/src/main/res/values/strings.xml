@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Github_Api_Application</string>
+    <string name="splash_text">GITHUB\nAPPLICATION</string>
 </resources>

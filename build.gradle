@@ -33,6 +33,6 @@ ext {
     glideVersion = "4.4.0"
     nav_version = "2.3.0"
 
-    CLIENT_ID = "a287f49e9b1364dcc0df"
-    CLIENT_SECRET = "b300aeb4458fd7c38406edfedc8b93afaff1df33"
+    CLIENT_ID = "b2232f34a1656f454d49"
+    CLIENT_SECRET = "ae20d33eb292b48c592533665e1970a42905bc24"
 }

@@ -1,9 +1,15 @@
 package com.example.github_api_application.ui.authorize
 
-import com.example.github_api_application.R
+import android.os.Bundle
+import com.example.github_api_application.BuildConfig
+import com.example.github_api_application.api.GithubService
 import com.example.github_api_application.base.BaseWebViewFragment
-import com.example.github_api_application.databinding.FragmentAuthorizeBinding
 
-class AuthorizeFragment : BaseWebViewFragment<FragmentAuthorizeBinding>(R.layout.fragment_authorize) {
+class AuthorizeFragment : BaseWebViewFragment() {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        binding.webView.loadUrl("${GithubService.webviewAuth}${BuildConfig.CLIENT_ID}")
+    }
 }

@@ -17,8 +17,7 @@
     <fragment
         android:id="@+id/authorizeFragment"
         android:name="com.example.github_api_application.ui.authorize.AuthorizeFragment"
-        android:label="AuthorizeFragment"
-        tools:layout="@layout/fragment_authorize">
+        android:label="AuthorizeFragment">
         <action
             android:id="@+id/action_authorizeFragment_to_userDetailFragment"
             app:destination="@id/userDetailFragment" />
