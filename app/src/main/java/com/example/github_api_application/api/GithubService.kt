@@ -1,10 +1,10 @@
 package com.example.github_api_application.api
 
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
-import retrofit2.http.Query
 import com.example.github_api_application.BuildConfig
+import com.example.github_api_application.model.vo.Repository
+import com.example.github_api_application.model.vo.User
+import retrofit2.Response
+import retrofit2.http.*
 
 object GithubService {
     const val GITHUB_BASE_URL = "https://api.github.com"
@@ -24,84 +24,87 @@ object GithubService {
     const val searchRepositories = "/search/repositories"
     const val searchUsers = "/search/users"
 
-    const val webviewAuth = "$GITHUB_WEBVIEW_URL/login/oauth/authorize?client_id="
+    const val webViewAuth = "${GITHUB_WEBVIEW_URL}/login/oauth/authorize?client_id="
 
     interface API {
-        @POST(requestToken)
-        fun requestAccessToken(
+
+//        @GET(requestToken)
+        @GET
+        suspend fun requestAccessToken(
+            @Url url: String,
             @Query("code") code: String,
             @Query("client_id") clientId: String = BuildConfig.CLIENT_ID,
             @Query("client_secret") clientSecret: String = BuildConfig.CLIENT_SECRET
-        )
+        ): Response<String>
 
         @GET(userByToken)
-        fun getUserInfoByAccessToken(@Query("access_token") accessToken: String)
+        suspend fun getUserInfoByAccessToken(@Query("access_token") accessToken: String): Response<User>
 
         @GET(userByName)
-        fun getUserInfo(@Path("ownerName") username: String)
+        suspend fun getUserInfo(@Path("ownerName") username: String): Response<User>
 
         @GET(userFollowers)
-        fun getFollowers(
+        suspend fun getFollowers(
             @Path("ownerName") username: String,
             @Query("page") page: Int = 1,
             @Query("per_page") per_page: Int = DEFAULT_PER_PAGE
-        )
+        ): Response<List<User>>
 
         @GET(userFollowing)
-        fun getFollowing(
+        suspend fun getFollowing(
             @Path("ownerName") username: String,
             @Query("page") page: Int = 1,
             @Query("per_page") per_page: Int = DEFAULT_PER_PAGE
-        )
+        ): Response<List<User>>
 
         @GET(watchers)
-        fun getWatchers(
+        suspend fun getWatchers(
             @Path("ownerName") ownerName: String,
             @Path("repoName") repoName: String,
             @Query("page") page: Int = 1,
             @Query("per_page") per_page: Int = DEFAULT_PER_PAGE
-        )
+        ): Response<List<User>>
 
         @GET(stargazers)
-        fun getStargazers(
+        suspend fun getStargazers(
             @Path("ownerName") ownerName: String,
             @Path("repoName") repoName: String,
             @Query("page") page: Int = 1,
             @Query("per_page") per_page: Int = DEFAULT_PER_PAGE
-        )
+        ): Response<List<User>>
 
         @GET(repository)
-        fun getRepository(
+        suspend fun getRepository(
             @Path("ownerName") ownerName: String,
             @Path("repoName") repoName: String
-        )
+        ): Response<Repository>
 
         @GET(userRepositories)
-        fun getUserRepos(
+        suspend fun getUserRepos(
             @Path("ownerName") ownerName: String,
             @Query("page") page: Int = 1,
             @Query("per_page") per_page: Int = DEFAULT_PER_PAGE
-        )
+        ): Response<List<Repository>>
 
         @GET(userStarredRepositories)
-        fun getStarredRepos(
+        suspend fun getStarredRepos(
             @Path("ownerName") ownerName: String,
             @Query("page") page: Int = 1,
             @Query("per_page") per_page: Int = DEFAULT_PER_PAGE
-        )
+        ): Response<List<Repository>>
 
         @GET(searchRepositories)
-        fun searchRepositories(
+        suspend fun searchRepositories(
             @Query("q") keyword: String,
             @Query("page") page: Int = 1,
             @Query("per_page") per_page: Int = DEFAULT_PER_PAGE
-        )
+        ): Response<List<Repository>>
 
         @GET(searchUsers)
-        fun searchUsers(
+        suspend fun searchUsers(
             @Query("q") keyword: String,
             @Query("page") page: Int = 1,
             @Query("per_page") per_page: Int = DEFAULT_PER_PAGE
-        )
+        ): Response<List<User>>
     }
 }

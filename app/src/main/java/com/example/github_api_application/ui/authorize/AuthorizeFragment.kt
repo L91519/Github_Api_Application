@@ -1,15 +1,82 @@
 package com.example.github_api_application.ui.authorize
 
+import android.graphics.Bitmap
 import android.os.Bundle
+import android.webkit.*
+import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.github_api_application.BuildConfig
 import com.example.github_api_application.api.GithubService
 import com.example.github_api_application.base.BaseWebViewFragment
+import com.example.github_api_application.model.GithubRepository
+import com.example.github_api_application.utils.parseQueryString
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.net.URI
 
-class AuthorizeFragment : BaseWebViewFragment() {
+class AuthorizeFragment() : BaseWebViewFragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    private val viewModel by viewModel(clazz = AuthorizeViewModel::class.java.kotlin)
 
-        binding.webView.loadUrl("${GithubService.webviewAuth}${BuildConfig.CLIENT_ID}")
+    override fun onViewCreated(savedInstanceState: Bundle?) {
+        super.onViewCreated(savedInstanceState)
+        binding.webView.loadUrl("${GithubService.webViewAuth}${BuildConfig.CLIENT_ID}")
+        viewModel.navigateToUserDetail.observe(viewLifecycleOwner, Observer {
+            findNavController().navigate(AuthorizeFragmentDirections.actionAuthorizeFragmentToUserDetailFragment())
+        })
+        initWebView()
     }
+
+    private fun initWebView() {
+        binding.webView.apply {
+            settings.javaScriptEnabled = true
+            webViewClient = object : WebViewClient() {
+                override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                    super.onPageStarted(view, url, favicon)
+
+                    if (url.toString().contains("code=")) {
+                        val map = URI(url.toString()).query.parseQueryString()
+                        val code = map["code"]
+
+                        code?.let { viewModel.requestAccessToken(it) }
+
+//                        showLoading("Logging in...")
+                    }
+                }
+            }
+            webChromeClient = DefaultChromeWebViewClient()
+        }
+        val url = binding.webView.url
+
+    }
+
+    fun receivedTitle(title: String?) {
+        binding.toolbar.title = title
+    }
+
+    open class DefaultWebViewClient() : WebViewClient() {
+    }
+
+    class DefaultChromeWebViewClient() : WebChromeClient() {
+        override fun onReceivedTitle(view: WebView?, title: String?) {
+            if (URLUtil.isValidUrl(title)) return
+//            if (title != null) receivedTitle(title)
+        }
+
+        override fun onConsoleMessage(consoleMessage: ConsoleMessage?): Boolean {
+//            val priority = when(consoleMessage?.messageLevel()) {
+//                ConsoleMessage.MessageLevel.TIP -> Logger.INFO
+//                ConsoleMessage.MessageLevel.LOG -> Logger.VERBOSE
+//                ConsoleMessage.MessageLevel.WARNING -> Logger.WARN
+//                ConsoleMessage.MessageLevel.ERROR -> Logger.ERROR
+//                ConsoleMessage.MessageLevel.DEBUG -> Logger.DEBUG
+//                else -> Logger.VERBOSE
+//            }
+            return true
+        }
+    }
+
 }

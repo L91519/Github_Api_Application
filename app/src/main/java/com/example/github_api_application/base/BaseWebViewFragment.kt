@@ -31,7 +31,7 @@ abstract class BaseWebViewFragment: Fragment(R.layout.fragment_webview) {
         binding.lifecycleOwner = viewLifecycleOwner
 
 
-        onViewCreated(savedInstanceState)
+        onViewCreated(savedInstanceState) 
     }
 
     open fun onViewCreated(savedInstanceState: Bundle?) {
