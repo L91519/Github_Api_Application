@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Btn2Button">
+		<item name="android:textSize">14dp</item>
+		<item name="android:letterSpacing">0.01</item>
+		<item name="android:lineSpacingExtra">9dp</item>
+	</style>
+
+	<style name="Btn2Button.Bold">
+		<item name="android:fontFamily">@font/notosans_cjk_kr_bold</item>
+		<item name="fontFamily">@font/notosans_cjk_kr_bold</item>
+	</style>
+
+	<style name="Btn2Button.Medium">
+		<item name="android:fontFamily">@font/notosans_cjk_kr_medium</item>
+		<item name="fontFamily">@font/notosans_cjk_kr_medium</item>
+	</style>
+
+	<style name="Btn2Button.Regular">
+		<item name="android:fontFamily">@font/notosans_cjk_kr_regular</item>
+		<item name="fontFamily">@font/notosans_cjk_kr_regular</item>
+	</style>
+
+	<style name="Btn2Button.Bold.CenterPrimary">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Btn2Button.Bold.CenterBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Btn2Button.Bold.RightWhite">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Btn2Button.Bold.CenterLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Btn2Button.Bold.RightLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Btn2Button.Bold.RightBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Btn2Button.Bold.LeftWhite">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Btn2Button.Bold.LeftPrimary">
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Btn2Button.Bold.LeftLightGrey">
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Btn2Button.Bold.LeftBlack">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Btn2Button.Bold.CenterWhite">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Btn2Button.Bold.RightPrimary">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Btn2Button.Medium.CenterLightGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Btn2Button.Medium.RightWhite">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Btn2Button.Medium.RightPrimary">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Btn2Button.Medium.RightLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Btn2Button.Medium.RightBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Btn2Button.Medium.LeftWhite">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Btn2Button.Medium.LeftPrimary">
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Btn2Button.Medium.LeftLightGrey">
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Btn2Button.Medium.LeftBlack">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Btn2Button.Medium.CenterWhite">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Btn2Button.Medium.CenterBlack">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Btn2Button.Medium.CenterPrimary">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Btn2Button.Regular.RightWhite">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Btn2Button.Regular.RightPrimary">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Btn2Button.Regular.RightLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Btn2Button.Regular.RightBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Btn2Button.Regular.LeftPrimary">
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Btn2Button.Regular.CenterLightGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Btn2Button.Regular.LeftLightGrey">
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Btn2Button.Regular.LeftWhite">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Btn2Button.Regular.CenterWhite">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Btn2Button.Regular.CenterPrimary">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Btn2Button.Regular.CenterBlack">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Btn2Button.Regular.LeftBlack">
+		<item name="android:textColor">@color/black</item>
+	</style>
+</resources>

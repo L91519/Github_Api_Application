@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="H5Headline">
+		<item name="android:textSize">24dp</item>
+		<item name="android:letterSpacing">0.01</item>
+	</style>
+
+	<style name="H5Headline.Bold">
+		<item name="android:fontFamily">@font/notosans_cjk_kr_bold</item>
+		<item name="fontFamily">@font/notosans_cjk_kr_bold</item>
+	</style>
+
+	<style name="H5Headline.Medium">
+		<item name="android:fontFamily">@font/notosans_cjk_kr_medium</item>
+		<item name="fontFamily">@font/notosans_cjk_kr_medium</item>
+	</style>
+
+	<style name="H5Headline.Regular">
+		<item name="android:fontFamily">@font/notosans_cjk_kr_regular</item>
+		<item name="fontFamily">@font/notosans_cjk_kr_regular</item>
+	</style>
+
+	<style name="H5Headline.Bold.CenterBlack">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="H5Headline.Bold.LeftLightGrey">
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="H5Headline.Bold.LeftPrimary">
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="H5Headline.Bold.LeftWhite">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="H5Headline.Bold.LeftBlack">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="H5Headline.Bold.RightLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="H5Headline.Bold.RightPrimary">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="H5Headline.Bold.RightWhite">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="H5Headline.Bold.CenterPrimary">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="H5Headline.Bold.CenterWhite">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="H5Headline.Bold.RightBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="H5Headline.Bold.CenterLightGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="H5Headline.Medium.CenterPrimary">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="H5Headline.Medium.LeftPrimary">
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="H5Headline.Medium.LeftWhite">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="H5Headline.Medium.RightBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="H5Headline.Medium.LeftLightGrey">
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="H5Headline.Medium.RightPrimary">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="H5Headline.Medium.RightWhite">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="H5Headline.Medium.CenterWhite">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="H5Headline.Medium.CenterLightGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="H5Headline.Medium.LeftBlack">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="H5Headline.Medium.RightLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="H5Headline.Medium.CenterBlack">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="H5Headline.Regular.CenterWhite">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="H5Headline.Regular.LeftWhite">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="H5Headline.Regular.RightBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="H5Headline.Regular.RightLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="H5Headline.Regular.LeftPrimary">
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="H5Headline.Regular.RightWhite">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="H5Headline.Regular.CenterLightGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="H5Headline.Regular.CenterBlack">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="H5Headline.Regular.CenterPrimary">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="H5Headline.Regular.LeftLightGrey">
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="H5Headline.Regular.RightPrimary">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="H5Headline.Regular.LeftBlack">
+		<item name="android:textColor">@color/black</item>
+	</style>
+</resources>

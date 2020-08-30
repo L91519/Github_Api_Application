@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="C1Caption">
+		<item name="android:textSize">12dp</item>
+		<item name="android:letterSpacing">0.01</item>
+	</style>
+
+	<style name="C1Caption.Bold">
+		<item name="android:fontFamily">@font/notosans_cjk_kr_bold</item>
+		<item name="fontFamily">@font/notosans_cjk_kr_bold</item>
+	</style>
+
+	<style name="C1Caption.Medium">
+		<item name="android:fontFamily">@font/notosans_cjk_kr_medium</item>
+		<item name="fontFamily">@font/notosans_cjk_kr_medium</item>
+	</style>
+
+	<style name="C1Caption.Regular">
+		<item name="android:fontFamily">@font/notosans_cjk_kr_regular</item>
+		<item name="fontFamily">@font/notosans_cjk_kr_regular</item>
+	</style>
+
+	<style name="C1Caption.Bold.LeftGrey">
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="C1Caption.Bold.LeftLightGrey">
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="C1Caption.Bold.LeftPrimary">
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="C1Caption.Bold.LeftBlack">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="C1Caption.Bold.LeftWhite">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="C1Caption.Bold.RightBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="C1Caption.Bold.RightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="C1Caption.Bold.RightLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="C1Caption.Bold.RightPrimary">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="C1Caption.Bold.CenterWhite">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="C1Caption.Bold.RightRed">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="C1Caption.Bold.CenterRed">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="C1Caption.Bold.RightWhite">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="C1Caption.Bold.CenterPrimary">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="C1Caption.Bold.CenterGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="C1Caption.Bold.CenterLightGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="C1Caption.Bold.CenterBlack">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="C1Caption.Bold.LeftRed">
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="C1Caption.Medium.CenterGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="C1Caption.Medium.LeftBlack">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="C1Caption.Medium.LeftGrey">
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="C1Caption.Medium.LeftLightGrey">
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="C1Caption.Medium.CenterWhite">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="C1Caption.Medium.LeftRed">
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="C1Caption.Medium.LeftWhite">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="C1Caption.Medium.CenterBlack">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="C1Caption.Medium.RightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="C1Caption.Medium.RightLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="C1Caption.Medium.CenterRed">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="C1Caption.Medium.RightPrimary">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="C1Caption.Medium.CenterPrimary">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="C1Caption.Medium.RightRed">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="C1Caption.Medium.CenterLightGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="C1Caption.Medium.RightWhite">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="C1Caption.Medium.LeftPrimary">
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="C1Caption.Medium.RightBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="C1Caption.Regular.LeftBlack">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="C1Caption.Regular.LeftGrey">
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="C1Caption.Regular.LeftLightGrey">
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="C1Caption.Regular.LeftPrimary">
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="C1Caption.Regular.CenterWhite">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="C1Caption.Regular.LeftWhite">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="C1Caption.Regular.RightBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="C1Caption.Regular.RightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="C1Caption.Regular.RightLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="C1Caption.Regular.RightPrimary">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="C1Caption.Regular.CenterRed">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="C1Caption.Regular.RightRed">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="C1Caption.Regular.CenterPrimary">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="C1Caption.Regular.RightWhite">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="C1Caption.Regular.CenterLightGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="C1Caption.Regular.CenterGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="C1Caption.Regular.LeftRed">
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="C1Caption.Regular.CenterBlack">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="C1Caption.Regular.RightMidGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey400</item>
+	</style>
+
+	<style name="C1Caption.Regular.CenterMidGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/grey400</item>
+	</style>
+
+	<style name="C1Caption.Regular.LeftMidGrey">
+		<item name="android:textColor">@color/grey400</item>
+	</style>
+</resources>

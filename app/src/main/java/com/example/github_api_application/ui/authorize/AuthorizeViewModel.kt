@@ -1,5 +1,7 @@
 package com.example.github_api_application.ui.authorize
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.Navigation.findNavController
@@ -17,6 +19,9 @@ import kotlinx.coroutines.launch
 class AuthorizeViewModel(private val githubRepository: GithubRepository) : BaseViewModel() {
     private val _navigateToUserDetail = LiveEvent<Unit>()
     val navigateToUserDetail = _navigateToUserDetail.toSingleEvent()
+
+    private val _accessToken = MutableLiveData<String>()
+    val accessToken = _accessToken
 
     fun requestAccessToken(code: String) {
         viewModelScope.launch(Dispatchers.IO) {

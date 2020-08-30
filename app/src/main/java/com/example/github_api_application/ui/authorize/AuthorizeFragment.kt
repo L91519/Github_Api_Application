@@ -1,5 +1,6 @@
 package com.example.github_api_application.ui.authorize
 
+import android.content.Context
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.webkit.*
@@ -11,21 +12,28 @@ import com.example.github_api_application.BuildConfig
 import com.example.github_api_application.api.GithubService
 import com.example.github_api_application.base.BaseWebViewFragment
 import com.example.github_api_application.model.GithubRepository
+import com.example.github_api_application.utils.SharedPreferenceManager
 import com.example.github_api_application.utils.parseQueryString
+import com.example.github_api_application.utils.string
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.net.URI
 
-class AuthorizeFragment() : BaseWebViewFragment() {
+class AuthorizeFragment : BaseWebViewFragment() {
 
     private val viewModel by viewModel(clazz = AuthorizeViewModel::class.java.kotlin)
 
     override fun onViewCreated(savedInstanceState: Bundle?) {
         super.onViewCreated(savedInstanceState)
         binding.webView.loadUrl("${GithubService.webViewAuth}${BuildConfig.CLIENT_ID}")
+
         viewModel.navigateToUserDetail.observe(viewLifecycleOwner, Observer {
             findNavController().navigate(AuthorizeFragmentDirections.actionAuthorizeFragmentToUserDetailFragment())
+        })
+
+        viewModel.accessToken.observe(viewLifecycleOwner, Observer {
+            saveAccessToken(it)
         })
         initWebView()
     }
@@ -53,6 +61,10 @@ class AuthorizeFragment() : BaseWebViewFragment() {
 
     }
 
+    private fun saveAccessToken(accessToken: String) {
+        SharedPreferenceManager.getInstance().accessToken = accessToken
+    }
+
     fun receivedTitle(title: String?) {
         binding.toolbar.title = title
     }
@@ -77,6 +89,11 @@ class AuthorizeFragment() : BaseWebViewFragment() {
 //            }
             return true
         }
+    }
+
+    companion object {
+        private const val PREF_USER_INFO = "userInfo"
+
     }
 
 }

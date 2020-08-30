@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.github_api_application.ui.users.UserDetailViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingStart="@dimen/space_median">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userName"
+            style="@style/B1Body.Bold.LeftBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/toolbar_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="Sumin Go" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userId"
+            style="@style/B1Body.Regular.LeftBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userName"
+            tool:text="L91519" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/followerTextView"
+            style="@style/B1Body.Bold.LeftBlack"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_xx_large"
+            android:layout_marginTop="@dimen/space_xx_large"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userId"
+            tool:text="Follower" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/followingTextView"
+            style="@style/B1Body.Bold.LeftBlack"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_xx_large"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/followerTextView"
+            tool:text="Following" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/stargazerTextView"
+            style="@style/B1Body.Bold.LeftBlack"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_xx_large"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/followingTextView"
+            tool:text="Stargazer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:paddingStart="@dimen/space_median"
+        android:paddingEnd="@dimen/space_median">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userName"
+            style="@style/B1Body.Bold.LeftBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/userId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tool:text="Sumin Go" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userId"
+            style="@style/B1Body.Regular.LeftBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/userName"
+            app:layout_constraintTop_toBottomOf="@id/userName"
+            tool:text="L91519" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/followStatusButton"
+            style="@style/Sc1SubCaption.Bold.CenterBlack"
+            android:layout_width="72dp"
+            android:layout_height="@dimen/buttonSmallHeight"
+            android:background="@drawable/bg_grey100_radius_4dp"
+            android:textSize="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="following" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

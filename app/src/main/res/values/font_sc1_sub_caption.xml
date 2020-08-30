@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="Sc1SubCaption">
+		<item name="android:textSize">11dp</item>
+		<item name="android:letterSpacing">0.01</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold">
+		<item name="android:fontFamily">@font/notosans_cjk_kr_bold</item>
+		<item name="fontFamily">@font/notosans_cjk_kr_bold</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium">
+		<item name="android:fontFamily">@font/notosans_cjk_kr_medium</item>
+		<item name="fontFamily">@font/notosans_cjk_kr_medium</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular">
+		<item name="android:fontFamily">@font/notosans_cjk_kr_regular</item>
+		<item name="fontFamily">@font/notosans_cjk_kr_regular</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.CenterGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.LeftBlack">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.LeftGrey">
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.LeftLightGrey">
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.CenterWhite">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.LeftRed">
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.LeftWhite">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.RightBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.RightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.RightLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.CenterRed">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.RightPrimary">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.CenterPrimary">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.RightRed">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.CenterLightGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.CenterBlack">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.LeftPrimary">
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Sc1SubCaption.Bold.RightWhite">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.CenterBlack">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.LeftGrey">
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.LeftLightGrey">
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.LeftPrimary">
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.LeftBlack">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.LeftWhite">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.RightBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.RightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.RightLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.RightPrimary">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.CenterWhite">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.RightRed">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.CenterRed">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.RightWhite">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.CenterPrimary">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.CenterLightGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.LeftRed">
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="Sc1SubCaption.Medium.CenterGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.CenterGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.CenterWhite">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.LeftBlack">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.LeftGrey">
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.LeftLightGrey">
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.CenterRed">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.LeftRed">
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.LeftWhite">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.RightBlack">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.RightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/deepgrey</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.RightLightGrey">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.CenterPrimary">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.RightPrimary">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.CenterLightGrey">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/grey300</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.RightRed">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/red</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.LeftPrimary">
+		<item name="android:textColor">@color/primary400</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.RightWhite">
+		<item name="android:gravity">end</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Sc1SubCaption.Regular.CenterBlack">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+</resources>
