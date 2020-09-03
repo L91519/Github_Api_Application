@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Github_Api_Application</string>
     <string name="splash_text">GITHUB\nAPPLICATION</string>
+
+    <string name="user_detail_fragment_following">Following</string>
+    <string name="user_detail_fragment_follower">Follower</string>
+    <string name="user_detail_fragment_stargazer">Stargazer</string>
+    
+    <string name="common_slash_divisor"> / %s</string>
 </resources>

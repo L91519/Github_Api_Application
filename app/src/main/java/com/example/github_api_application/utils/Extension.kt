@@ -2,6 +2,7 @@ package com.example.github_api_application.utils
 
 import androidx.lifecycle.LiveData
 import com.hadilq.liveevent.LiveEvent
+import kotlinx.coroutines.Job
 
 fun String.parseQueryString(): Map<String,String> {
     val map = HashMap<String,String>()
@@ -19,4 +20,10 @@ fun <T> LiveData<T>.toSingleEvent(): LiveData<T> {
         result.value = it
     }
     return result
+}
+
+fun Job?.cancelIfActive() {
+    if (this?.isActive == true) {
+        cancel()
+    }
 }
