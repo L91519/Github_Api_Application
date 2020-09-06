@@ -51,6 +51,10 @@
         <action
             android:id="@+id/action_usersFragment_to_userDetailFragment"
             app:destination="@id/userDetailFragment" />
+        <argument
+            android:name="userType"
+            app:nullable="false"
+            app:argType="com.example.github_api_application.model.vo.UserType"/>
     </fragment>
     <fragment
         android:id="@+id/repositoryDetailFragment"
