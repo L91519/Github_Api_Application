@@ -5,6 +5,14 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.example.github_api_application.ui.repositories.RepositoriesViewModel" />
+
+        <variable
+            name="item"
+            type="com.example.github_api_application.model.vo.Repository" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,20 +27,24 @@
             style="@style/B1Body.Regular.LeftBlack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{item.owner.login}"
             app:layout_constraintBottom_toTopOf="@id/descriptionTextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
-            tool:text="Sumin Go " />
+            tool:text="Sumin Go" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/repositoryNameTextView"
             style="@style/B1Body.Medium.LeftBlack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{@string/common_slash_divisor(item.name)}"
             app:layout_constraintBottom_toBottomOf="@id/userIdTextView"
             app:layout_constraintStart_toEndOf="@id/userIdTextView"
             app:layout_constraintTop_toTopOf="@id/userIdTextView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toStartOf="@id/starStatusButton"
             tool:text="/ CleanArchitecture" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -40,12 +52,14 @@
             style="@style/B1Body.Regular.LeftBlack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{item.description}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/userIdTextView"
             app:layout_constraintTop_toBottomOf="@id/userIdTextView"
-            tool:text="L91519" />
+            tool:text="description" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:visibility="gone"
             android:id="@+id/starStatusButton"
             style="@style/Sc1SubCaption.Bold.CenterBlack"
             android:layout_width="52dp"

@@ -3,6 +3,7 @@ package com.example.github_api_application.api
 import com.example.github_api_application.BuildConfig
 import com.example.github_api_application.model.vo.Repository
 import com.example.github_api_application.model.vo.User
+import io.reactivex.Observable
 import retrofit2.Response
 import retrofit2.http.*
 

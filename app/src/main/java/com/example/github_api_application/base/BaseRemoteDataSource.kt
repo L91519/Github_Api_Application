@@ -10,7 +10,7 @@ import retrofit2.Response
 
 open class BaseRemoteDataSource(private val gson: Gson) {
 
-    protected suspend fun <DATA> getResult(call: suspend () -> Response<DATA>): DATA {
+    protected suspend fun <DATA> getResult(call: suspend () -> Response<DATA>): DATA? {
         try {
             val response = call()
             if (response.isSuccessful) {
@@ -21,16 +21,9 @@ open class BaseRemoteDataSource(private val gson: Gson) {
             return error(response.message())
         } catch (e: Exception) {
             val error = e.toString()
-            return error(error)
+            return null
         }
     }
-
-    protected suspend fun <DATA> requestCodeResult(call: suspend () -> Response<DATA>): String {
-        val response = call().raw().toString()
-
-        return response
-    }
-
 }
 
 fun <T> resultFlow(call: suspend () -> T): Flow<T> {

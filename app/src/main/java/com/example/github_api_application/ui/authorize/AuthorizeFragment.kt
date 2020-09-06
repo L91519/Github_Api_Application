@@ -29,11 +29,8 @@ class AuthorizeFragment : BaseWebViewFragment() {
         binding.webView.loadUrl("${GithubService.webViewAuth}${BuildConfig.CLIENT_ID}")
 
         viewModel.navigateToUserDetail.observe(viewLifecycleOwner, Observer {
-            findNavController().navigate(AuthorizeFragmentDirections.actionAuthorizeFragmentToUserDetailFragment())
-        })
-
-        viewModel.accessToken.observe(viewLifecycleOwner, Observer {
             saveAccessToken(it)
+            findNavController().navigate(AuthorizeFragmentDirections.actionAuthorizeFragmentToUserDetailFragment())
         })
         initWebView()
     }

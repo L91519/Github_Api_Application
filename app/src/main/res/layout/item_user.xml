@@ -5,6 +5,14 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.example.github_api_application.ui.users.UsersViewModel" />
+
+        <variable
+            name="item"
+            type="com.example.github_api_application.model.vo.User" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

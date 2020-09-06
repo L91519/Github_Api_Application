@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tool="http://schemas.android.com/tools">
+    xmlns:tool="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -23,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/space_median"
             android:layout_marginTop="@dimen/toolbar_size"
-            android:text="@{viewModel.user.username}"
+            android:text="@{viewModel.user.name}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tool:text="Sumin Go" />
@@ -33,7 +34,7 @@
             style="@style/B1Body.Regular.LeftBlack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{viewModel.user.id}"
+            android:text="@{viewModel.user.login}"
             app:layout_constraintStart_toStartOf="@id/userName"
             app:layout_constraintTop_toBottomOf="@id/userName"
             tool:text="L91519" />
@@ -53,10 +54,13 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="@dimen/space_median"
+            android:paddingTop="@dimen/space_median"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/userId" />
+            app:layout_constraintTop_toBottomOf="@id/userId"
+            tools:listItem="@layout/item_repository" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
