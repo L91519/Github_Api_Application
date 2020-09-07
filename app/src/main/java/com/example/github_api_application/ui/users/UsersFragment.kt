@@ -38,9 +38,12 @@ class UsersFragment : BaseFragment<FragmentUsersBinding, UsersViewModel>(
     }
 
     private fun subscribeUI() {
-
-        viewModel.userList.observe(this, Observer {
+        viewModel.userList.observe(viewLifecycleOwner, Observer {
             userRecyclerViewAdapter.updateList(it) { { it } }
+        })
+
+        viewModel.navigateToBack.observe(viewLifecycleOwner, Observer {
+            activity?.onBackPressed()
         })
 
     }

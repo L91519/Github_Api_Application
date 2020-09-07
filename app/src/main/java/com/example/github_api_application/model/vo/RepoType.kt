@@ -8,8 +8,8 @@ enum class RepoType(val value: String) {
         @Throws
         fun parse(value: String): RepoType {
             return when (value) {
-                "Starred Repository" -> STARRED_REPO
-                "User Repository" -> USER_REPO
+                "Starred Repo" -> STARRED_REPO
+                "User Repo" -> USER_REPO
                 else -> throw IllegalAccessException("not defined value")
             }
         }

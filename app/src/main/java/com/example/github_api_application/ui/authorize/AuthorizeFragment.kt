@@ -30,7 +30,7 @@ class AuthorizeFragment : BaseWebViewFragment() {
 
         viewModel.navigateToUserDetail.observe(viewLifecycleOwner, Observer {
             saveAccessToken(it)
-            findNavController().navigate(AuthorizeFragmentDirections.actionAuthorizeFragmentToUserDetailFragment())
+            findNavController().navigate(AuthorizeFragmentDirections.actionAuthorizeFragmentToUserDetailFragment(null))
         })
         initWebView()
     }

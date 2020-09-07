@@ -30,7 +30,6 @@ class UsersViewModel(private val githubRepository: GithubRepository) : BaseViewM
         when (userType) {
             UserType.FOLLOWER -> getFollowerList()
             UserType.FOLLOWING -> getFollowingList()
-            UserType.STARGAZER -> getStargazerList()
         }
     }
 
@@ -51,13 +50,6 @@ class UsersViewModel(private val githubRepository: GithubRepository) : BaseViewM
             githubRepository.getFollowing(getUserID()).collect {
                 _userList.postValue(it)
             }
-        }
-    }
-
-    private fun getStargazerList() {
-        userListJob?.cancelIfActive()
-        userListJob = viewModelScope.launch (Dispatchers.IO){
-
         }
     }
 

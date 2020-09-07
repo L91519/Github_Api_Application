@@ -48,9 +48,9 @@
             android:background="@drawable/btn_ripple"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:onClick="@{()->viewModel.navigateToUserList()}"
+            android:onClick="@{(view)->viewModel.navigateToUserList(view)}"
             android:paddingStart="@dimen/space_median"
-            android:text="Follower"
+            android:text="@string/common_follower"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userId" />
 
@@ -62,9 +62,9 @@
             android:background="@drawable/btn_ripple"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:onClick="@{()->viewModel.navigateToUserList()}"
+            android:onClick="@{(view)->viewModel.navigateToUserList(view)}"
             android:paddingStart="@dimen/space_median"
-            android:text="Following"
+            android:text="@string/common_following"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/followerTextView" />
 
@@ -76,9 +76,9 @@
             android:background="@drawable/btn_ripple"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:onClick="@{()->viewModel.navigateToUserList()}"
+            android:onClick="@{(view)->viewModel.navigateToRepoList(view)}"
             android:paddingStart="@dimen/space_median"
-            android:text="Stargazer"
+            android:text="@string/common_starred_repo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/followingTextView" />
 
