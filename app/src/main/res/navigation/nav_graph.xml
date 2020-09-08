@@ -33,6 +33,10 @@
         <action
             android:id="@+id/action_userDetailFragment_to_usersFragment"
             app:destination="@id/usersFragment" />
+        <argument
+            android:name="userID"
+            app:argType="string"
+            app:nullable="true"/>
     </fragment>
     <fragment
         android:id="@+id/repositoriesFragment"
@@ -42,6 +46,14 @@
         <action
             android:id="@+id/action_repositoriesFragment_to_repositoryDetailFragment"
             app:destination="@id/repositoryDetailFragment" />
+        <argument
+            android:name="repoType"
+            app:nullable="false"
+            app:argType="com.example.github_api_application.model.vo.RepoType"/>
+        <argument
+            android:name="userID"
+            app:nullable="false"
+            app:argType="string"/>
     </fragment>
     <fragment
         android:id="@+id/usersFragment"
@@ -51,6 +63,14 @@
         <action
             android:id="@+id/action_usersFragment_to_userDetailFragment"
             app:destination="@id/userDetailFragment" />
+        <argument
+            android:name="userType"
+            app:nullable="false"
+            app:argType="com.example.github_api_application.model.vo.UserType"/>
+        <argument
+            android:name="userID"
+            app:nullable="false"
+            app:argType="string"/>
     </fragment>
     <fragment
         android:id="@+id/repositoryDetailFragment"

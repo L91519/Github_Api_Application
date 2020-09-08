@@ -7,4 +7,9 @@
     <string name="user_detail_fragment_stargazer">Stargazer</string>
     
     <string name="common_slash_divisor"> / %s</string>
+    <string name="common_following">Following</string>
+    <string name="common_follower">Follower</string>
+    <string name="common_starred_repo">Starred Repo</string>
+    <string name="common_stargazer">Stargazer</string>
+
 </resources>
