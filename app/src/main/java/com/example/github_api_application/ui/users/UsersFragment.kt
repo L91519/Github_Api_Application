@@ -12,17 +12,18 @@ class UsersFragment : BaseFragment<FragmentUsersBinding, UsersViewModel>(
     R.layout.fragment_users, UsersViewModel::class.java) {
 
     private lateinit var userRecyclerViewAdapter: BaseRecyclerViewAdapter
-    lateinit var userType: UserType
+    private lateinit var userType: UserType
+    private lateinit var userID: String
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         userType = UsersFragmentArgs.fromBundle(arguments?:return).userType
-
+        userID = UsersFragmentArgs.fromBundle(arguments?:return).userID
     }
 
     override fun onResume() {
         super.onResume()
-        viewModel.fetch(userType)
+        viewModel.fetch(userType, userID)
 
         setupUI()
         subscribeUI()

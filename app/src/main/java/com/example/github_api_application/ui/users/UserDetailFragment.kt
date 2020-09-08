@@ -49,12 +49,12 @@ class UserDetailFragment : BaseFragment<FragmentUserDetailBinding, UserDetailVie
 
         viewModel.navigateToUserList.observe(viewLifecycleOwner, Observer {
             binding.drawerLayout.closeDrawer(GravityCompat.END)
-            findNavController().navigate(UserDetailFragmentDirections.actionUserDetailFragmentToUsersFragment(it, null))
+            findNavController().navigate(UserDetailFragmentDirections.actionUserDetailFragmentToUsersFragment(it, viewModel.user.value?.login?:return@Observer))
         })
 
         viewModel.navigateToRepoList.observe(viewLifecycleOwner, Observer {
             binding.drawerLayout.closeDrawer(GravityCompat.END)
-            findNavController().navigate(UserDetailFragmentDirections.actionUserDetailFragmentToRepositoriesFragment(it, viewModel.user.value?.name))
+            findNavController().navigate(UserDetailFragmentDirections.actionUserDetailFragmentToRepositoriesFragment(it, viewModel.user.value?.login?:return@Observer))
         })
     }
 }

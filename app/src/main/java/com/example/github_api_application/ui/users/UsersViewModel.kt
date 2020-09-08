@@ -26,28 +26,26 @@ class UsersViewModel(private val githubRepository: GithubRepository) : BaseViewM
 
     private var userListJob: Job? = null
 
-    fun fetch(userType: UserType) {
+    fun fetch(userType: UserType, userID: String) {
         when (userType) {
-            UserType.FOLLOWER -> getFollowerList()
-            UserType.FOLLOWING -> getFollowingList()
+            UserType.FOLLOWER -> getFollowerList(userID)
+            UserType.FOLLOWING -> getFollowingList(userID)
         }
     }
 
-    private fun getUserID(): String = SharedPreferenceManager.getInstance().userID!!
-
-    private fun getFollowerList() {
+    private fun getFollowerList(userID: String) {
         userListJob?.cancelIfActive()
-        userListJob = viewModelScope.launch (Dispatchers.IO){
-            githubRepository.getFollowers(getUserID()).collect {
+        userListJob = viewModelScope.launch(Dispatchers.IO) {
+            githubRepository.getFollowers(userID).collect {
                 _userList.postValue(it)
             }
         }
     }
 
-    private fun getFollowingList() {
+    private fun getFollowingList(userID: String) {
         userListJob?.cancelIfActive()
-        userListJob = viewModelScope.launch (Dispatchers.IO){
-            githubRepository.getFollowing(getUserID()).collect {
+        userListJob = viewModelScope.launch(Dispatchers.IO) {
+            githubRepository.getFollowing(userID).collect {
                 _userList.postValue(it)
             }
         }
