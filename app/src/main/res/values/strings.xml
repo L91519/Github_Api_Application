@@ -11,5 +11,6 @@
     <string name="common_follower">Follower</string>
     <string name="common_starred_repo">Starred Repo</string>
     <string name="common_stargazer">Stargazer</string>
+    <string name="common_sign_out">Sign Out</string>
 
 </resources>

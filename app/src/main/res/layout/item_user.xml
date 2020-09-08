@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/white"
+        android:clickable="true"
         android:paddingStart="@dimen/space_median"
         android:paddingEnd="@dimen/space_median">
 
@@ -56,6 +57,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tool:text="following" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey200"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

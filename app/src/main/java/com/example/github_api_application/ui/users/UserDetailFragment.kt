@@ -1,5 +1,6 @@
 package com.example.github_api_application.ui.users
 
+import android.os.Bundle
 import androidx.core.view.GravityCompat
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -13,11 +14,17 @@ class UserDetailFragment : BaseFragment<FragmentUserDetailBinding, UserDetailVie
     R.layout.fragment_user_detail, UserDetailViewModel::class.java
 ) {
     private lateinit var recyclerViewAdapter: BaseRecyclerViewAdapter
+    private var userID: String? = null
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        userID = UserDetailFragmentArgs.fromBundle(arguments?:return).userID
+    }
 
     override fun onResume() {
         super.onResume()
 
-        viewModel.fetch()
+        viewModel.fetch(userID)
         setupUI()
         subscribeUI()
     }
@@ -49,12 +56,12 @@ class UserDetailFragment : BaseFragment<FragmentUserDetailBinding, UserDetailVie
 
         viewModel.navigateToUserList.observe(viewLifecycleOwner, Observer {
             binding.drawerLayout.closeDrawer(GravityCompat.END)
-            findNavController().navigate(UserDetailFragmentDirections.actionUserDetailFragmentToUsersFragment(it, null))
+            findNavController().navigate(UserDetailFragmentDirections.actionUserDetailFragmentToUsersFragment(it, viewModel.user.value?.login?:return@Observer))
         })
 
         viewModel.navigateToRepoList.observe(viewLifecycleOwner, Observer {
             binding.drawerLayout.closeDrawer(GravityCompat.END)
-            findNavController().navigate(UserDetailFragmentDirections.actionUserDetailFragmentToRepositoriesFragment(it, viewModel.user.value?.name))
+            findNavController().navigate(UserDetailFragmentDirections.actionUserDetailFragmentToRepositoriesFragment(it, viewModel.user.value?.login?:return@Observer))
         })
     }
 }
