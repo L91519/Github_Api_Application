@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.github_api_application.ui.repositories.RepositoriesViewModel" />
+            type="com.example.github_api_application.ui.users.UsersViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,6 +20,7 @@
             layout="@layout/include_toolbar" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userRecyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

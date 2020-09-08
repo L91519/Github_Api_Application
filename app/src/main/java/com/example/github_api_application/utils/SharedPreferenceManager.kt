@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 class SharedPreferenceManager private constructor(private val sharedPreferences: SharedPreferences) {
 
     var accessToken: String? by sharedPreferences.string(null)
+    var userID: String? by sharedPreferences.string(null)
 
     companion object {
         private const val PREF_INFO = "preferenceInfo"
