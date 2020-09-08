@@ -25,7 +25,7 @@ class RepositoriesFragment : BaseFragment<FragmentRepositoriesBinding, Repositor
     override fun onResume() {
         super.onResume()
 
-        viewModel.fetch(userID)
+        viewModel.fetch(repoType, userID)
 
         setupUI()
         subscribeUI()

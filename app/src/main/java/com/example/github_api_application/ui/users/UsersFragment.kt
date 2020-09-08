@@ -2,6 +2,7 @@ package com.example.github_api_application.ui.users
 
 import android.os.Bundle
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.example.github_api_application.R
 import com.example.github_api_application.base.BaseFragment
 import com.example.github_api_application.base.recyclerView.BaseRecyclerViewAdapter
@@ -45,6 +46,10 @@ class UsersFragment : BaseFragment<FragmentUsersBinding, UsersViewModel>(
 
         viewModel.navigateToBack.observe(viewLifecycleOwner, Observer {
             activity?.onBackPressed()
+        })
+
+        viewModel.navigateToUserDetail.observe(viewLifecycleOwner, Observer {
+            findNavController().navigate(UsersFragmentDirections.actionUsersFragmentToUserDetailFragment(it.login))
         })
 
     }

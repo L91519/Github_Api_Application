@@ -21,6 +21,9 @@ class UsersViewModel(private val githubRepository: GithubRepository) : BaseViewM
     private val _userList = MutableLiveData<List<User>>()
     val userList = _userList
 
+    private val _navigateToUserDetail = LiveEvent<User>()
+    val navigateToUserDetail = _navigateToUserDetail.toSingleEvent()
+
     private val _navigateToBack = LiveEvent<Unit>()
     val navigateToBack = _navigateToBack.toSingleEvent()
 
@@ -53,6 +56,10 @@ class UsersViewModel(private val githubRepository: GithubRepository) : BaseViewM
 
     fun onClickBack() {
         _navigateToBack.value = Unit
+    }
+
+    fun onClickUser(item: User) {
+        _navigateToUserDetail.value = item
     }
 
 }
