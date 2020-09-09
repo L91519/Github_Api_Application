@@ -2,6 +2,7 @@ package com.example.github_api_application.ui.users
 
 import android.os.Bundle
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.example.github_api_application.R
 import com.example.github_api_application.base.BaseFragment
 import com.example.github_api_application.base.recyclerView.BaseRecyclerViewAdapter
@@ -12,17 +13,18 @@ class UsersFragment : BaseFragment<FragmentUsersBinding, UsersViewModel>(
     R.layout.fragment_users, UsersViewModel::class.java) {
 
     private lateinit var userRecyclerViewAdapter: BaseRecyclerViewAdapter
-    lateinit var userType: UserType
+    private lateinit var userType: UserType
+    private lateinit var userID: String
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         userType = UsersFragmentArgs.fromBundle(arguments?:return).userType
-
+        userID = UsersFragmentArgs.fromBundle(arguments?:return).userID
     }
 
     override fun onResume() {
         super.onResume()
-        viewModel.fetch(userType)
+        viewModel.fetch(userType, userID)
 
         setupUI()
         subscribeUI()
@@ -44,6 +46,10 @@ class UsersFragment : BaseFragment<FragmentUsersBinding, UsersViewModel>(
 
         viewModel.navigateToBack.observe(viewLifecycleOwner, Observer {
             activity?.onBackPressed()
+        })
+
+        viewModel.navigateToUserDetail.observe(viewLifecycleOwner, Observer {
+            findNavController().navigate(UsersFragmentDirections.actionUsersFragmentToUserDetailFragment(it.login))
         })
 
     }
