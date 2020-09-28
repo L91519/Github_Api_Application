@@ -55,9 +55,8 @@ class UsersFragment : BaseFragment<FragmentUsersBinding, UsersViewModel>(
     }
 
     private fun setupRecyclerView() {
-        userRecyclerViewAdapter = object : BaseRecyclerViewAdapter() {
-            override fun getItemLayoutRes(): Int = R.layout.item_user
-        }
+        userRecyclerViewAdapter = UserListAdapter()
+        userRecyclerViewAdapter.viewModel = viewModel
         binding.userRecyclerView.adapter = userRecyclerViewAdapter
 
     }

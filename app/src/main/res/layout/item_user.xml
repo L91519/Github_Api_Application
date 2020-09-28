@@ -21,7 +21,8 @@
         android:background="@color/white"
         android:clickable="true"
         android:paddingStart="@dimen/space_median"
-        android:paddingEnd="@dimen/space_median">
+        android:paddingEnd="@dimen/space_median"
+        android:focusable="true">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/userImage"
