@@ -14,7 +14,7 @@ open class BaseViewHolder(@LayoutRes layoutRes: Int, parent: ViewGroup) :
 
     val binding: ViewDataBinding = DataBindingUtil.bind(itemView)!!
 
-    fun bind(item: Any?, viewModel: BaseViewModel? = null) {
+    open fun bind(item: Any?, viewModel: BaseViewModel? = null) {
         binding.run {
             setVariable(BR.viewModel, viewModel)
             setVariable(BR.item, item)

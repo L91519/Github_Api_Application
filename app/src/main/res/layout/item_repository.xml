@@ -37,12 +37,12 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/repositoryNameTextView"
             style="@style/B1Body.Medium.LeftBlack"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginEnd="@dimen/space_median"
+            android:maxLines="1"
             android:text="@{@string/common_slash_divisor(item.name)}"
             app:layout_constraintBottom_toBottomOf="@id/userIdTextView"
-            app:layout_constraintEnd_toStartOf="@id/starStatusButton"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@id/userIdTextView"
             app:layout_constraintTop_toTopOf="@id/userIdTextView"
@@ -56,23 +56,16 @@
             android:maxLines="1"
             android:text="@{item.description}"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/starStatusButton"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/userIdTextView"
             app:layout_constraintTop_toBottomOf="@id/userIdTextView"
             tool:text="description" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/starStatusButton"
-            style="@style/Sc1SubCaption.Bold.CenterBlack"
-            android:layout_width="52dp"
-            android:layout_height="@dimen/buttonSmallHeight"
-            android:background="@drawable/bg_grey100_radius_4dp"
-            android:textSize="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tool:text="unstar" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey200"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <View
             android:layout_width="match_parent"
