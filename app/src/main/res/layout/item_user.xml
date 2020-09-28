@@ -23,40 +23,28 @@
         android:paddingStart="@dimen/space_median"
         android:paddingEnd="@dimen/space_median">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/userImage"
+            android:layout_width="@dimen/buttonHeightBig"
+            android:layout_height="@dimen/buttonHeightBig"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            imageURL="@{item.avatar_url}"/>
+
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/userName"
             style="@style/B1Body.Bold.LeftBlack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{item.name}"
-            app:layout_constraintBottom_toTopOf="@id/userId"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="@{item.login}"
+            android:layout_marginStart="@dimen/space_median"
+            app:layout_constraintStart_toEndOf="@id/userImage"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
             tool:text="Sumin Go" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/userId"
-            style="@style/B1Body.Regular.LeftBlack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{item.login}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/userName"
-            app:layout_constraintTop_toBottomOf="@id/userName"
-            tool:text="L91519" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/followStatusButton"
-            style="@style/Sc1SubCaption.Bold.CenterBlack"
-            android:layout_width="72dp"
-            android:layout_height="@dimen/buttonSmallHeight"
-            android:background="@drawable/bg_grey100_radius_4dp"
-            android:textSize="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tool:text="following" />
 
         <View
             android:layout_width="match_parent"

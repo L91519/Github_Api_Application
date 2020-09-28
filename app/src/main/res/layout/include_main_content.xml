@@ -23,6 +23,7 @@
             android:layout_height="@dimen/buttonHeightBig"
             android:layout_marginStart="@dimen/space_median"
             android:layout_marginTop="@dimen/toolbar_size"
+            app:imageURL="@{viewModel.user.avatar_url}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tool:background="@color/grey200" />
