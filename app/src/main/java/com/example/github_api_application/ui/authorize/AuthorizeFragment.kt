@@ -54,8 +54,6 @@ class AuthorizeFragment : BaseWebViewFragment() {
             }
             webChromeClient = DefaultChromeWebViewClient()
         }
-        val url = binding.webView.url
-
     }
 
     private fun saveAccessToken(accessToken: String) {

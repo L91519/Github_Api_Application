@@ -2,7 +2,6 @@ package com.example.github_api_application.ui.users
 
 import android.os.Bundle
 import androidx.core.view.GravityCompat
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.github_api_application.R
 import com.example.github_api_application.base.BaseFragment
@@ -18,7 +17,7 @@ class UserDetailFragment : BaseFragment<FragmentUserDetailBinding, UserDetailVie
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        userID = UserDetailFragmentArgs.fromBundle(arguments?:return).userID
+        userID = UserDetailFragmentArgs.fromBundle(arguments ?: return).userID
     }
 
     override fun onResume() {
@@ -45,23 +44,34 @@ class UserDetailFragment : BaseFragment<FragmentUserDetailBinding, UserDetailVie
     }
 
     private fun subscribeUI() {
-        viewModel.user.observe(viewLifecycleOwner, Observer {
-            SharedPreferenceManager.getInstance().userID = it.login
-            viewModel.getUserRepos()
-        })
-
-        viewModel.userRepos.observe(viewLifecycleOwner, Observer {
-            recyclerViewAdapter.updateList(it) { { it } }
-        })
-
-        viewModel.navigateToUserList.observe(viewLifecycleOwner, Observer {
-            binding.drawerLayout.closeDrawer(GravityCompat.END)
-            findNavController().navigate(UserDetailFragmentDirections.actionUserDetailFragmentToUsersFragment(it, viewModel.user.value?.login?:return@Observer))
-        })
-
-        viewModel.navigateToRepoList.observe(viewLifecycleOwner, Observer {
-            binding.drawerLayout.closeDrawer(GravityCompat.END)
-            findNavController().navigate(UserDetailFragmentDirections.actionUserDetailFragmentToRepositoriesFragment(it, viewModel.user.value?.login?:return@Observer))
-        })
+        viewModel {
+            user.onResult {
+                SharedPreferenceManager.getInstance().userID = it.login
+                viewModel.getUserRepos()
+            }
+            userRepos.onResult {
+                recyclerViewAdapter.updateList(it) { { it } }
+            }
+            navigateToUserList.onResult {
+                binding.drawerLayout.closeDrawer(GravityCompat.END)
+                findNavController().navigate(
+                    UserDetailFragmentDirections.actionUserDetailFragmentToUsersFragment(
+                        it,
+                        viewModel.user.value?.login ?: return@onResult
+                    )
+                )
+            }
+            navigateToRepoList.onResult {
+                findNavController().navigate(
+                    UserDetailFragmentDirections.actionUserDetailFragmentToRepositoriesFragment(
+                        it,
+                        viewModel.user.value?.login ?: return@onResult
+                    )
+                )
+            }
+            navigateToBack.onResult {
+                findNavController().navigateUp()
+            }
+        }
     }
 }
