@@ -7,6 +7,8 @@ import com.example.github_api_application.model.GithubRepository
 import com.example.github_api_application.model.vo.RepoType
 import com.example.github_api_application.model.vo.Repository
 import com.example.github_api_application.utils.cancelIfActive
+import com.example.github_api_application.utils.toSingleEvent
+import com.hadilq.liveevent.LiveEvent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.collect
@@ -17,10 +19,13 @@ class RepositoriesViewModel(private val githubRepository: GithubRepository) : Ba
     private val _repoList = MutableLiveData<List<Repository>>()
     val repoList = _repoList
 
+    private val _navigateToBack = LiveEvent<Unit>()
+    val navigateToBack = _navigateToBack.toSingleEvent()
+
     var repoListJob: Job? = null
 
     fun fetch(repoType: RepoType, userID: String) {
-        when(repoType) {
+        when (repoType) {
             RepoType.STARRED_REPO -> getStarredRepoList(userID)
             RepoType.USER_REPO -> getUserRepoList(userID)
         }
@@ -35,8 +40,11 @@ class RepositoriesViewModel(private val githubRepository: GithubRepository) : Ba
         }
     }
 
+    fun onClickBack() {
+        _navigateToBack.value = Unit
+    }
+
     private fun getUserRepoList(userID: String) {
 
     }
-
 }

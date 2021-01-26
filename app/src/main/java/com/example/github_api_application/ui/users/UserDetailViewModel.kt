@@ -2,7 +2,6 @@ package com.example.github_api_application.ui.users
 
 import android.view.View
 import android.widget.TextView
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.github_api_application.base.BaseViewModel
@@ -34,6 +33,9 @@ class UserDetailViewModel(private val githubRepository: GithubRepository) : Base
     private val _navigateToRepoList = LiveEvent<RepoType>()
     val navigateToRepoList = _navigateToRepoList.toSingleEvent()
 
+    private val _navigateToBack = LiveEvent<Unit>()
+    val navigateToBack = _navigateToBack.toSingleEvent()
+
     private var authJob: Job? = null
     private var repositoryJob: Job? = null
 
@@ -50,29 +52,32 @@ class UserDetailViewModel(private val githubRepository: GithubRepository) : Base
                 }
             }
         } ?: run {
-        authJob = viewModelScope.launch(Dispatchers.IO) {
-            githubRepository.getUserInfoByAccessToken(SharedPreferenceManager.getInstance().accessToken!!).collect {
-                _user.postValue(it)
+            authJob = viewModelScope.launch(Dispatchers.IO) {
+                githubRepository.getUserInfoByAccessToken(SharedPreferenceManager.getInstance().accessToken!!).collect {
+                    _user.postValue(it)
+                }
             }
         }
     }
-}
 
-fun getUserRepos() {
-    repositoryJob?.cancelIfActive()
-    repositoryJob = viewModelScope.launch(Dispatchers.IO) {
-        githubRepository.getUserRepos(_user.value?.login!!).collect {
-            _userRepos.postValue(it)
+    fun getUserRepos() {
+        repositoryJob?.cancelIfActive()
+        repositoryJob = viewModelScope.launch(Dispatchers.IO) {
+            githubRepository.getUserRepos(_user.value?.login!!).collect {
+                _userRepos.postValue(it)
+            }
         }
     }
-}
 
-fun navigateToUserList(view: View) {
-    _navigateToUserList.value = UserType.parse((view as TextView).text.toString())
-}
+    fun navigateToUserList(view: View) {
+        _navigateToUserList.value = UserType.parse((view as TextView).text.toString())
+    }
 
-fun navigateToRepoList(view: View) {
-    _navigateToRepoList.value = RepoType.parse((view as TextView).text.toString())
-}
+    fun navigateToRepoList(view: View) {
+        _navigateToRepoList.value = RepoType.parse((view as TextView).text.toString())
+    }
 
+    fun navigateToBack() {
+        _navigateToBack.value = Unit
+    }
 }

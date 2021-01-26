@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tool="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -9,15 +8,20 @@
         <variable
             name="viewModel"
             type="com.example.github_api_application.ui.repositories.RepositoriesViewModel" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include
+        <com.example.github_api_application.ui.widget.CustomToolbar
             android:id="@+id/toolbarContentLayout"
-            layout="@layout/include_toolbar" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationClick="@{() -> viewModel.onClickBack()}" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/repositoryRecyclerView"
@@ -28,7 +32,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolbarContentLayout"
-            tools:listitem="@layout/item_repository"/>
+            tools:listitem="@layout/item_repository" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
