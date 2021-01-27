@@ -1,4 +1,4 @@
-package com.example.github_api_application.base
+package com.example.base.ui
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes
@@ -7,8 +7,8 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
-import com.example.github_api_application.BR
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import com.example.base.BR
 
 abstract class BaseFragment<VIEW_DATA_BINDING : ViewDataBinding, VIEW_MODEL : BaseViewModel>(
     @LayoutRes layoutRes: Int, viewModelCls: Class<VIEW_MODEL>) : Fragment(layoutRes) {

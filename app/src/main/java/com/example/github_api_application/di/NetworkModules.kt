@@ -2,22 +2,17 @@ package com.example.github_api_application.di
 
 import com.example.github_api_application.api.GithubGsonConverterFactory
 import com.example.github_api_application.api.GithubService
-import com.example.github_api_application.base.BaseModuleProvider
+import com.example.base.BaseModuleProvider
 import com.google.gson.GsonBuilder
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import org.koin.android.ext.koin.androidApplication
 import org.koin.core.module.Module
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.LocalTime
 import java.util.concurrent.TimeUnit
 
-object NetworkModules : BaseModuleProvider {
+object NetworkModules : com.example.base.BaseModuleProvider {
     private const val TAG = "OkHttp"
     private const val connectTimeout = 7L
     private const val writeTimeout = 7L

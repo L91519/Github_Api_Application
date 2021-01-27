@@ -1,7 +1,7 @@
 package com.example.github_api_application.model
 
+import com.example.base.net.BaseRemoteDataSource
 import com.example.github_api_application.api.GithubService
-import com.example.github_api_application.base.BaseRemoteDataSource
 import com.google.gson.Gson
 
 class GithubRemoteDataSource(gson: Gson, private val githubAPI: GithubService.API) :

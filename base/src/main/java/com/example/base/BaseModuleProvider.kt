@@ -1,4 +1,4 @@
-package com.example.github_api_application.base
+package com.example.base
 
 import org.koin.core.module.Module
 

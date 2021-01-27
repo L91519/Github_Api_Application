@@ -2,7 +2,7 @@ package com.example.github_api_application.ui.repositories
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.github_api_application.base.BaseViewModel
+import com.example.base.ui.BaseViewModel
 import com.example.github_api_application.model.GithubRepository
 import com.example.github_api_application.model.vo.RepoType
 import com.example.github_api_application.model.vo.Repository

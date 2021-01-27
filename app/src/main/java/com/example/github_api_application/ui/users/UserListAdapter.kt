@@ -1,10 +1,10 @@
 package com.example.github_api_application.ui.users
 
 import android.view.ViewGroup
+import com.example.base.ui.BaseViewModel
+import com.example.base.ui.recyclerView.BaseRecyclerViewAdapter
+import com.example.base.ui.recyclerView.BaseViewHolder
 import com.example.github_api_application.R
-import com.example.github_api_application.base.BaseViewModel
-import com.example.github_api_application.base.recyclerView.BaseRecyclerViewAdapter
-import com.example.github_api_application.base.recyclerView.BaseViewHolder
 import com.example.github_api_application.model.vo.User
 
 class UserListAdapter : BaseRecyclerViewAdapter() {

@@ -1,13 +1,12 @@
 package com.example.github_api_application.di
 
-import com.example.github_api_application.base.BaseModuleProvider
-import com.example.github_api_application.base.BaseRemoteDataSource
+import com.example.base.BaseModuleProvider
 import com.example.github_api_application.model.GithubRemoteDataSource
 import com.example.github_api_application.model.GithubRepository
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
-object DataSourceModules : BaseModuleProvider {
+object DataSourceModules : com.example.base.BaseModuleProvider {
 
 	override val modules: List<Module>
 		get() = listOf(

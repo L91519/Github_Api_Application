@@ -1,4 +1,4 @@
-package com.example.github_api_application.base
+package com.example.base
 
 sealed class NetResultState<out T> {
     data class Success<T>(val result: T): NetResultState<T>()

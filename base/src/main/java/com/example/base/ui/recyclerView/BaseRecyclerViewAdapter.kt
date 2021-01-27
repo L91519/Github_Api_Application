@@ -1,11 +1,10 @@
-package com.example.github_api_application.base.recyclerView
+package com.example.base.ui.recyclerView
 
-import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.github_api_application.base.BaseViewModel
+import com.example.base.ui.BaseViewModel
 
 abstract class BaseRecyclerViewAdapter : RecyclerView.Adapter<BaseViewHolder>() {
     @LayoutRes
