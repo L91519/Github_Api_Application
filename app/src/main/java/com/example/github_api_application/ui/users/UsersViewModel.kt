@@ -2,12 +2,10 @@ package com.example.github_api_application.ui.users
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.github_api_application.base.BaseViewModel
+import com.example.base.ui.BaseViewModel
 import com.example.github_api_application.model.GithubRepository
-import com.example.github_api_application.model.vo.Repository
 import com.example.github_api_application.model.vo.User
 import com.example.github_api_application.model.vo.UserType
-import com.example.github_api_application.utils.SharedPreferenceManager
 import com.example.github_api_application.utils.cancelIfActive
 import com.example.github_api_application.utils.toSingleEvent
 import com.hadilq.liveevent.LiveEvent
@@ -33,6 +31,7 @@ class UsersViewModel(private val githubRepository: GithubRepository) : BaseViewM
         when (userType) {
             UserType.FOLLOWER -> getFollowerList(userID)
             UserType.FOLLOWING -> getFollowingList(userID)
+            else -> return
         }
     }
 

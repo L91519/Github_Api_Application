@@ -1,4 +1,4 @@
-package com.example.github_api_application.base.recyclerView
+package com.example.base.ui.recyclerView
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,8 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
-import com.example.github_api_application.BR
-import com.example.github_api_application.base.BaseViewModel
+import com.example.base.BR
+import com.example.base.ui.BaseViewModel
 
 open class BaseViewHolder(@LayoutRes layoutRes: Int, parent: ViewGroup) :
     RecyclerView.ViewHolder(LayoutInflater.from(parent.context).inflate(layoutRes, parent, false)) {

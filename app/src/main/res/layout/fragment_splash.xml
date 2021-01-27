@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.github_api_application.base.BaseViewModel" />
+            type="com.example.base.ui.BaseViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

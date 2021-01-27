@@ -3,9 +3,9 @@ package com.example.github_api_application.ui.users
 import android.os.Bundle
 import androidx.core.view.GravityCompat
 import androidx.navigation.fragment.findNavController
+import com.example.base.ui.BaseFragment
+import com.example.base.ui.recyclerView.BaseRecyclerViewAdapter
 import com.example.github_api_application.R
-import com.example.github_api_application.base.BaseFragment
-import com.example.github_api_application.base.recyclerView.BaseRecyclerViewAdapter
 import com.example.github_api_application.databinding.FragmentUserDetailBinding
 import com.example.github_api_application.utils.SharedPreferenceManager
 

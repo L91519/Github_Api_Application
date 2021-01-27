@@ -1,6 +1,5 @@
-package com.example.github_api_application.base
+package com.example.base.net
 
-import com.example.github_api_application.utils.parseQueryString
 import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow

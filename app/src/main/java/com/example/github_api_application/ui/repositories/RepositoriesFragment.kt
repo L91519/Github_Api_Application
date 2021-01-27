@@ -3,8 +3,8 @@ package com.example.github_api_application.ui.repositories
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.github_api_application.R
-import com.example.github_api_application.base.BaseFragment
-import com.example.github_api_application.base.recyclerView.BaseRecyclerViewAdapter
+import com.example.base.ui.BaseFragment
+import com.example.base.ui.recyclerView.BaseRecyclerViewAdapter
 import com.example.github_api_application.databinding.FragmentRepositoriesBinding
 import com.example.github_api_application.model.vo.RepoType
 

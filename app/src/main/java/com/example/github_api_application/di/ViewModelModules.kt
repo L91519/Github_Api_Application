@@ -1,6 +1,6 @@
 package com.example.github_api_application.di
 
-import com.example.github_api_application.base.BaseModuleProvider
+import com.example.base.BaseModuleProvider
 import com.example.github_api_application.ui.authorize.AuthorizeViewModel
 import com.example.github_api_application.ui.repositories.RepositoriesViewModel
 import com.example.github_api_application.ui.splash.SplashViewModel
@@ -10,7 +10,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
-object ViewModelModules: BaseModuleProvider {
+object ViewModelModules : BaseModuleProvider {
 
     override val modules: List<Module>
         get() = listOf(viewModelModule)

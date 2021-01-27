@@ -1,4 +1,4 @@
-package com.example.github_api_application.base.recyclerView
+package com.example.base.ui.recyclerView
 
 import androidx.recyclerview.widget.DiffUtil
 

@@ -1,31 +1,25 @@
 package com.example.github_api_application.ui.authorize
 
-import android.content.Context
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.webkit.*
 import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.example.base.ui.BaseWebViewFragment
 import com.example.github_api_application.BuildConfig
+import com.example.github_api_application.R
 import com.example.github_api_application.api.GithubService
-import com.example.github_api_application.base.BaseWebViewFragment
-import com.example.github_api_application.model.GithubRepository
+import com.example.github_api_application.databinding.FragmentWebviewBinding
 import com.example.github_api_application.utils.SharedPreferenceManager
 import com.example.github_api_application.utils.parseQueryString
-import com.example.github_api_application.utils.string
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.net.URI
 
-class AuthorizeFragment : BaseWebViewFragment() {
+class AuthorizeFragment : BaseWebViewFragment<FragmentWebviewBinding>(R.layout.fragment_webview) {
 
     private val viewModel by viewModel(clazz = AuthorizeViewModel::class.java.kotlin)
 
     override fun onViewCreated(savedInstanceState: Bundle?) {
-        super.onViewCreated(savedInstanceState)
         binding.webView.loadUrl("${GithubService.webViewAuth}${BuildConfig.CLIENT_ID}")
 
         viewModel.navigateToUserDetail.observe(viewLifecycleOwner, Observer {
